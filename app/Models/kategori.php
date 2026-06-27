@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Attributes\Table;
+use Illuminate\Database\Eloquent\Model;
+
+#[Table('kategoris')]
+#[Fillable(['id', 'nama_kategori', 'deskripsi'])]
+class kategori extends Model
+{
+    public function barang()
+    {
+        return $this->hasMany(barang::class);
+    }
+}
