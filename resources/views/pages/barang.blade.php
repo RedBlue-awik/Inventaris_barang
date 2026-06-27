@@ -236,6 +236,8 @@
                                                     <option value="" hidden disabled selected>Pilih Satuan</option>
                                                     <option value="Pcs"
                                                         {{ $barang->satuan == 'Pcs' ? 'selected' : '' }}>Pcs</option>
+                                                    <option value="Unit"
+                                                        {{ $barang->satuan == 'Unit' ? 'selected' : '' }}>Unit</option>
                                                     <option value="Box"
                                                         {{ $barang->satuan == 'Box' ? 'selected' : '' }}>Box</option>
                                                 </select>
@@ -270,9 +272,6 @@
                                                         {{ $barang->kondisi == 'baik' ? 'selected' : '' }}>Baik</option>
                                                     <option value="rusak"
                                                         {{ $barang->kondisi == 'rusak' ? 'selected' : '' }}>Rusak</option>
-                                                    <option value="kadaluarsa"
-                                                        {{ $barang->kondisi == 'kadaluarsa' ? 'selected' : '' }}>Kadaluarsa
-                                                    </option>
                                                 </select>
                                             </div>
                                         </div>
@@ -365,6 +364,7 @@
                                 <select name="satuan" id="satuan" class="form-control rounded-lg w-full" required>
                                     <option value="" hidden disabled selected>Pilih Satuan</option>
                                     <option value="Pcs">Pcs</option>
+                                    <option value="Unit">Unit</option>
                                     <option value="Box">Box</option>
                                 </select>
                             </div>
@@ -389,7 +389,6 @@
                                     <option value="" hidden disabled selected>Pilih Kondisi</option>
                                     <option value="baik">Baik</option>
                                     <option value="rusak">Rusak</option>
-                                    <option value="kadaluarsa">Kadaluarsa</option>
                                 </select>
                             </div>
                             <div class="modal-footer border-t border-slate-100 p-4">

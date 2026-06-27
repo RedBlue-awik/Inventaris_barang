@@ -1,58 +1,179 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Inventaris - App
 
-## About Laravel
+## Posisi yang Dilamar
+**Backend Developer**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Deskripsi Aplikasi
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Sistem Inventaris Barang adalah aplikasi berbasis web yang digunakan untuk mengelola inventaris perusahaan
 
-## Learning Laravel
+### Fitur Utama : 
+- Login, Register dan Logout [ Role : admin | gudang | staf ]
+- Daashboard
+- Manajemen User [ Khusus Admin ]
+- CRUD Kategori [ Khusus Admin ]
+- CRUD Supplier  [ Khusus Admin ]
+- CRUD Barang [ Staf hanya bisa melihat data barang ]
+- CRUD Permintaan [ Staf hanya bisa melihat dan membuat permintaan sedangkan admin dan gudang bisa menyetujui dan menolak permintaan ]
+- CRUD Mutasi Barang [ Khusus Admin dan Gudang ]
+- Membuat permintaan yang disetujui otomatis berubah ke diserahkan dan menambah Mutasi Barang secara otomatis
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Teknologi & Library yang Digunakan 
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+| Teknologi | Versi |
+|-----------|--------|
+| PHP | 8.5+ |
+| Laravel | 13.x |
+| MySQL | 8.x |
+| Tailwind CSS | 4.x |
+| Composer | 2.10.1 |
+| Node.js | 24.18.0 |
 
-## Agentic Development
+| Library | Versi |
+|-----------|--------|
+| Font Awesome | 7.0.1 |
+| SweetAlert 2 | 11.x |
+| Datatables | 2.0.8 |
+| Datatables Responsive | 3.0.2 |
+| Bootstrap | 5.2.3 |
+| Poppeer.js | 2.11.6 |
+| JQuery | 3.7.1 |
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+
+## Instalasi Aplikasi
+
+### 1. Clone Repository 
 
 ```bash
-composer require laravel/boost --dev
+git clone https://github.com/RedBlue-awik/Inventaris_barang.git
+```
+### 2. Masuk ke Folder Project
 
-php artisan boost:install
+```bash
+cd Inventaris_barang
+```
+### 3. Install Composer & npm
+
+```bash
+composer install
+
+npm instal
+```
+### 4. Salin File Environment atau .env
+
+```bash
+cp .env.example .env
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+### 5. Generate APP_KEY
 
-## Contributing
+```bash
+php artisan key:generate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 6. Jalankan Migration & Seeder
+```bash
+php artisan migrate
 
-## Code of Conduct
+php artisan db:seed
+```
+**atau**
+```bash
+php artisan migrate --seed
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 7. Jalankan Server
+```bash
+composer run dev
+```
+## Cara Mengakses Aplikasi
 
-## Security Vulnerabilities
+***Buka browser dan akses :***
+```
+http://127.0.0.1:8000
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+atau
 
-## License
+```
+http://localhost:8000
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 8. Schedule ( disetujui ke diserahkan dan membuat mutasi_barang secara otomatis )
+## Cara menjalankan schedule
+```bash
+php artisan schedule:work
+```
+**Nanti Schedule akan dijalankan setiap 1 jam nya**
+
+---
+
+## Screenshot 
+
+### login
+
+```md
+![Login](image/login.png)
+```
+
+### Dashboard 
+
+**- Dashboard Admin -**
+```md
+![Dashboard-Admin](image/dashboard-admin.png)
+```
+
+**- Dashboard Gudanng -**
+```md
+![Dashboard-Gudang](image/dashboard-gudang.png)
+```
+
+**- Dashboard Staf -**
+```md
+![Dashboard-Staf](image/dashboard-staf.png)
+```
+
+### Master Data
+**- Mutasi Barang -**
+```md
+![Mutasi_Barang](image/mutasi_barang.png)
+```
+
+**- User -**
+```md
+![Manajemen_Users](image/user.png)
+```
+
+
+---
+
+## Hak Akses
+
+### Admin
+
+- Dashboard
+- Barang ( bisa melihat, menambah, mengedit dan menghapus data barang )
+- Kategori
+- Supplier
+- Permintaan ( bisa melihat semua permintaan dan menolak atau menyetujui permintaan )
+- Mutasi Barang
+- User
+
+### Gudang
+
+- Dashboard
+- Barang ( bisa melihat, menambah, mengedit dan menghapus data barang )
+- Permintaan ( bisa melihat semua permintaan dan menolak atau menyetujui permintaan )
+- Mutasi Barang
+
+### Staf
+- Dashboard
+- Barang ( melihat barang )
+- Permintaan ( membuat permintaan dan hanya bisa melihat permintaan sendiri )
+
+---

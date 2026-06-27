@@ -15,7 +15,15 @@ class PermintaanController extends Controller
      */
     public function index()
     {
-        $permintaans = permintaan::with(['permohonan', 'barang', 'disetujui'])->latest()->get();
+        if (Auth::user()->role == 'staf') {
+
+            $permintaans = permintaan::where('permohonan_id', Auth::id())
+                ->latest()
+                ->get();
+        } else {
+
+            $permintaans = permintaan::with(['permohonan', 'barang', 'disetujui'])->latest()->get();
+        }
         $barangs = barang::where('stok_saat_ini', '>', 0)->get();
         return view('pages.permintaan', compact('permintaans', 'barangs'));
     }

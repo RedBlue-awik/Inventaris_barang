@@ -33,7 +33,7 @@ class BarangController extends Controller
             'stok_saat_ini' => 'required|integer|min:0',
             'stok_minimum' => 'required|integer|min:2',
             'lokasi_rak' => 'required|string|max:255',
-            'kondisi' => 'required|in:baik,rusak,kadaluarsa',
+            'kondisi' => 'required|in:baik,rusak',
         ]);
 
         barang::create($request->all());
