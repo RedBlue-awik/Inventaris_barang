@@ -171,10 +171,3 @@ php artisan schedule:work
 - Permintaan ( membuat permintaan dan hanya bisa melihat permintaan sendiri )
 
 ---
-
-## Fitur yang Belum Selesai
-
-- Laporan Inventaris
-- Export PDF
-
----
