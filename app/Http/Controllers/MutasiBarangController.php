@@ -18,7 +18,7 @@ class MutasiBarangController extends Controller
         $mutasiBarang = mutasi_barang::with('barang', 'staff', 'referensi')->latest()->get();
         $barangs = barang::all();
         $users = User::all();
-        return view('mutasi_barang', compact('mutasiBarang', 'barangs', 'users'));
+        return view('pages.mutasi_barang', compact('mutasiBarang', 'barangs', 'users'));
     }
 
     /**

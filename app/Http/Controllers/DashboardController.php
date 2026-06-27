@@ -82,7 +82,7 @@ class DashboardController extends Controller
             'mutasi' => $jumlahMutasiUser,
         ];
 
-        return view('dashboard', [
+        return view('pages.dashboard', [
             'totalBarang' => $totalBarang,
             'barangMasuk' => $barangMasuk,
             'barangKeluar' => $barangKeluar,

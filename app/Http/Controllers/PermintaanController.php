@@ -17,7 +17,7 @@ class PermintaanController extends Controller
     {
         $permintaans = permintaan::with(['permohonan', 'barang', 'disetujui'])->latest()->get();
         $barangs = barang::where('stok_saat_ini', '>', 0)->get();
-        return view('permintaan', compact('permintaans', 'barangs'));
+        return view('pages.permintaan', compact('permintaans', 'barangs'));
     }
 
     /**

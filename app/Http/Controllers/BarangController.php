@@ -18,7 +18,7 @@ class BarangController extends Controller
         $barangs = barang::with(['kategori', 'supplier'])->get();
         $kategoris = kategori::all();
         $suppliers = supplier::all();
-        return view('barang', compact('barangs', 'kategoris', 'suppliers'));
+        return view('pages.barang', compact('barangs', 'kategoris', 'suppliers'));
     }
 
     /**

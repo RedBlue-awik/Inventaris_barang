@@ -13,7 +13,7 @@ class SupplierController extends Controller
     public function index()
     {
         $supplier = supplier::latest()->get();
-        return view('supplier', compact('supplier'));
+        return view('pages.supplier', compact('supplier'));
     }
 
     /**

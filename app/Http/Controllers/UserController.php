@@ -10,7 +10,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::latest()->get();
-        return view('user', compact('users'));
+        return view('pages.user', compact('users'));
     }
 
     public function store(Request $request)
