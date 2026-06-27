@@ -117,37 +117,31 @@ php artisan schedule:work
 
 ### login
 
-```md
+
 ![Login](image/login.png)
-```
 
 ### Dashboard 
 
 **- Dashboard Admin -**
-```md
+
 ![Dashboard-Admin](image/dashboard-admin.png)
-```
 
 **- Dashboard Gudanng -**
-```md
+
 ![Dashboard-Gudang](image/dashboard-gudang.png)
-```
 
 **- Dashboard Staf -**
-```md
+
 ![Dashboard-Staf](image/dashboard-staf.png)
-```
 
 ### Master Data
 **- Mutasi Barang -**
-```md
+
 ![Mutasi_Barang](image/mutasi_barang.png)
-```
 
 **- User -**
-```md
+
 ![Manajemen_Users](image/user.png)
-```
 
 
 ---
