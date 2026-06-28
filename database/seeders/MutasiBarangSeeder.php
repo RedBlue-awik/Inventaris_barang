@@ -20,9 +20,9 @@ class MutasiBarangSeeder extends Seeder
             'user_id' => 2,
             'referensi_id' => null,
             'tipe' => 'masuk',
-            'jumlah' => 20,
+            'jumlah' => 10,
             'stok_sebelum' => 0,
-            'stok_sesudah' => 20,
+            'stok_sesudah' => 10,
             'keterangan' => 'Isi ulang stok',
         ]);
     }
