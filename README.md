@@ -113,6 +113,17 @@ php artisan schedule:work
 
 ---
 
+## Akun Demo
+
+Gunakan akun berikut untuk mengakses aplikasi:
+
+| Role | Email | Password | Role |
+|------|-------|----------|---------|
+| Admin | admin@gmail.com | 12345678 | admin |
+| Gudang | gudang@gmail.com | 12345678 | gudang |
+
+---
+
 ## Screenshot 
 
 ### login
