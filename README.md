@@ -113,6 +113,19 @@ php artisan schedule:work
 
 ---
 
+## Prasyarat
+
+Pastikan perangkat telah terpasang:
+
+- PHP 8.5 atau lebih baru
+- Composer 2.10.1 atau lebih baru
+- Node.js 24.18.0 atau lebih baru
+- MySQL 8.x
+- XAMPP (Apache & MySQL) atau server lokal lain yang mendukung PHP dan MySQL
+- Git
+
+---
+
 ## Akun Demo
 
 Gunakan akun berikut untuk mengakses aplikasi:
