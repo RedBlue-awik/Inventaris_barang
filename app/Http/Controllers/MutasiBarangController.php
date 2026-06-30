@@ -51,11 +51,9 @@ class MutasiBarangController extends Controller
             switch($tipe) {
                 case 'masuk':
                     $stok_sesudah = $stok_sebelum + $jumlah;
-                    $barang->increment('stok_saat_ini', $jumlah);
                     break;
                 case 'keluar':
                     $stok_sesudah = $stok_sebelum - $jumlah;
-                    $barang->decrement('stok_saat_ini', $jumlah);
                     break;
                 default:
                     $stok_sesudah = $stok_sebelum;
